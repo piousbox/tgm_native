@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/piousbox/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/piousbox/projects/java/ReactNative/my-app/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/jsr305-3.0.0_08f01180262cc796f82b5bd46b2241b62b5b19a7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/piousbox/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/piousbox/projects/java/ReactNative/my-app/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.0.1_93203d0bb5c220eb4ca9c7fcdf692399a16532a5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/piousbox/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/Users/piousbox/projects/java/ReactNative/my-app/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.6.0_41db9b7b655d20cefd989e11724e10382e122730/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/piousbox/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/Users/piousbox/projects/java/ReactNative/my-app/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.13.0_877de62fc5c085e9e9c914e95a1cbf7a8a03c0ab/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/piousbox/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="/Users/piousbox/projects/java/ReactNative/my-app/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-urlconnection-3.6.0_5e9e75cb7f8bf3c54a30468f98f1c29a0e73b3e5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/piousbox/projects/java/ReactNative/my-app/android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/piousbox/projects/java/ReactNative/my-app/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_fda74cdf76998f78d5402655a38b5b4d1f82f0f4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/piousbox/.android/build-cache/4bdcba49961bf482c55a071c28eeab4b8c50fd1c/output/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/piousbox/projects/java/ReactNative/my-app/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.0.1_e6ebb1627b680b1294f92ee59f58687e4e5dbc61/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/piousbox/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/piousbox/projects/java/ReactNative/my-app/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/javax.inject-1_eded232467aa8b1a6dc70270fea3ef841c4a5d25/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/piousbox/.android/build-cache/4bdcba49961bf482c55a071c28eeab4b8c50fd1c/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/piousbox/projects/java/ReactNative/my-app/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_79627e1f92f86bcda1e4288d5bd65e93c07cbc53/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/piousbox/.android/build-cache/0245192d961f624f3ba03ed301e093a06efb62db/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="/Users/piousbox/projects/java/ReactNative/my-app/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_195bf8400347bcff667b6efb0104928d6e8e54bf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/piousbox/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/Users/piousbox/projects/java/ReactNative/my-app/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/staticlayout-proxy-1.0_cef81b3116692a7a64d926166f76a9aca200764a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/piousbox/.android/build-cache/316e127f623c88d304a12946c2891fdc7f56b474/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/Users/piousbox/projects/java/ReactNative/my-app/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_dd25e70aed1305cf25f40363b1ae07a39144a9f5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/piousbox/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/piousbox/projects/java/ReactNative/my-app/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/bolts-tasks-1.4.0_2b4f4c761cf44577e0cfe9b1efe2a8f6a963c954/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/piousbox/.android/build-cache/55d7b1989784e133763a5d85a5df2083cc4f7d7a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="/Users/piousbox/projects/java/ReactNative/my-app/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_13cdebce9f99880ce1a978238a1dc959071c8a34/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/piousbox/.android/build-cache/77e0f97668264bf20d31ee4b0dbff173608b7217/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="24303e5ddb2c1210dd7e8db9dbab018f50313e48">
+        <dex dex="/Users/piousbox/projects/java/ReactNative/my-app/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4bfda9c8fa3bc48c47c883669e6a3c156ac253a8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/piousbox/.android/build-cache/678d1ea21c77666ca3218708b9b28bafa2d1bfad/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="/Users/piousbox/projects/java/ReactNative/my-app/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_93f830e6fa15a2d09a9916ad8208ff3bc4499c2f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/piousbox/.android/build-cache/ec61e5e16620498cee97d2d78f220ba74dc546ee/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="/Users/piousbox/projects/java/ReactNative/my-app/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8cbe6348617e52e96be64e66a954c82255cce1e0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/piousbox/.android/build-cache/77e0f97668264bf20d31ee4b0dbff173608b7217/output/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/Users/piousbox/projects/java/ReactNative/my-app/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/infer-annotations-4.0_faae4ff1277003787392f4aa00363489dc742b23/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/piousbox/.android/build-cache/0889136f4cafdabc54c90d0ce01709cfac9a5044/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/Users/piousbox/projects/java/ReactNative/my-app/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b9a653a440ae28153a8ab8bb96f6769d74385ccc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/piousbox/.android/build-cache/11ff382cacb3422ae3e59762bcb009c63c454785/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="/Users/piousbox/projects/java/ReactNative/my-app/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6729414367cc5f468890605505371d599d624d30/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/piousbox/projects/java/ReactNative/my-app/android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="f9b6f801da695f124b2f02d2e727ea078810f453">
+        <dex dex="/Users/piousbox/projects/java/ReactNative/my-app/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_295e34dd8f5ce0ae83f6f62c033dd4cdf44d3e22/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/piousbox/.android/build-cache/09a0ac4098219fa2c2d864ca04c96eaa01145a8b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="/Users/piousbox/projects/java/ReactNative/my-app/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b8fb279c6a8ea56aa9ccc556a426976b8ea15f30/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/piousbox/.android/build-cache/c14f9e7d2963f3f0fe3993901074375e4595fe4d/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/piousbox/projects/java/ReactNative/my-app/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_977cb5205f8bf210842ca2ffc1ea599f1491135f/classes.dex" />
+    </item>
+
+</items>

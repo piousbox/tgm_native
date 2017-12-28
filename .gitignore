@@ -1,5 +1,9 @@
-
+.DS_Store
 node_modules
 *.trash
 *~
-
+/my-app/android/app/build/tmp
+/my-app/android/app/build/intermediates
+/my-app/android/.idea
+/my-app/android/.gradle
+/my-app/android/build/android-profile
