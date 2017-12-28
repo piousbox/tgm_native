@@ -17,7 +17,9 @@ cd android && ./gradlew assembleRelease
 # In the app on android I opened Menu (Command + M in Genymotion) -> Dev Settings -> Debug server host & port for device
 # set the value to: localhost:8081
 
-
+csr for manager.piousbox.com/api:
+openssl req -new -newkey rsa:2048 -nodes -keyout server.key -out server.csr
+this-chlng-pwd
 
 
 
