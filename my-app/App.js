@@ -17,6 +17,8 @@ const store = createStoreWithMiddleware(reducer)
 
 class Home extends React.Component {
   render () {
+    console.log('+++ +++ Home render!', this.props, this.state)
+
     return (
       <View style={styles.container}>
         <Text>This is home</Text>
@@ -30,11 +32,10 @@ class Home2 extends React.Component {
     super(props)
 
     let url = "https://manager.piousbox.com/api/cities.json"
+    let self = this
     fetch(url).then(r => r.json()).then(_data => {
-      done = true
       console.log('+++ data:', _data)
-      this.setState({ cities: _data })
-      cities = _data.cities
+      self.setState({ cities: _data })
     }).catch(_err => {
       console.log('+++ fetch failure:', _err)
     })
@@ -42,7 +43,7 @@ class Home2 extends React.Component {
 
   render () {
     console.log('+++ Home2 render:', this.props, this.state)
-    if (!this.state) { return (null) }
+    if (!this.state || !this.state.cities) { return (null) }
 
     return (
       <View style={styles.container}>
@@ -52,6 +53,7 @@ class Home2 extends React.Component {
         <Text>Shake your phone to open the developer menu.</Text>
         <FlatList data={ this.state.cities }
                   renderItem={({item}) => <Text>{item.name}</Text>}
+                  keyExtractor={(item, index) => index}
         />
       </View>)
   }
