@@ -7,3 +7,7 @@ node_modules
 /my-app/android/.idea
 /my-app/android/.gradle
 /my-app/android/build/android-profile
+my-app/android/app/app.iml
+my-app/android/app/build/outputs/logs/manifest-merger-debug-report.txt
+my-app/android/build/intermediates/dex-cache/cache.xml
+example-react-native-redux
