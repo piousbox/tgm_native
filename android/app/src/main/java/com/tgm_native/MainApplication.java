@@ -1,4 +1,4 @@
-package com.wasya_native2;
+package com.tgm_native;
 
 import android.app.Application;
 
