@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "287149765762",
+    "firebase_url": "https://travel-guide-mob-1495044453610.firebaseio.com",
+    "project_id": "travel-guide-mob-1495044453610",
+    "storage_bucket": "travel-guide-mob-1495044453610.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287149765762:android:f9e3fc7d99ac131f",
+        "android_client_info": {
+          "package_name": "com.tgm_native"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "287149765762-him0n351sno9k5ts808cbmjmvc5npg2q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzzd2l6M0oI-Cz35pwERd0xAq4VbG8yLY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
