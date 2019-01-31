@@ -18,7 +18,7 @@ export default class IndustrialHeader extends React.Component {
           onPress: this.props.openSidebar, 
         }}
         centerComponent={{ 
-          text: 'Wasya Co', style: { color: '#fff' },
+          text: 'TGM', style: { color: '#fff' },
           onPress: () => this.props.navigate('Home'),
         }}
       />)

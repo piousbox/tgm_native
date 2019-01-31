@@ -16,6 +16,22 @@ import IndustrialHeader  from './IndustrialHeader'
 import Menu              from './Menu'
 import MainBanner        from './MainBanner'
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+    height: window.height,
+  },
+  whiteBg: {
+    backgroundColor: '#F5FCFF',
+    height: window.height,
+    padding: 10,
+  },
+  h1: {},
+})
+
 class HomeScreen extends React.Component {
   static navigationOptions = { header: null }
 
@@ -54,30 +70,19 @@ class HomeScreen extends React.Component {
         menu={menu}
         isOpen={this.state.isOpen}
         onChange={isOpen => this.updateMenuState(isOpen)} >
-        <ScrollView>
+        <ScrollView  >
           <IndustrialHeader openSidebar={() => {this.setState({isOpen:true})}} />
-          <Text>Hello!</Text>
+          <View style={styles.whiteBg} >
+            <Text style={{ paddingBottom: 10 }} >Hello!</Text>
+            <Button onPress={()=>{}} title="Login" />
+          </View>
         </ScrollView>
       </SideMenu>
     )
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-    height: window.height,
-  },
-  whiteBg: {
-    backgroundColor: '#F5FCFF',
-    height: window.height,
-    padding: 10,
-  },
-  h1: {},
-})
+
 
 const AppNavigator = createStackNavigator({
   Home: { screen: HomeScreen },
