@@ -9,8 +9,9 @@ import {
 } from 'react-native'
 import SideMenu from 'react-native-side-menu'
 import { createStackNavigator, createAppContainer, } from 'react-navigation'
+import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin'
 
-const window = Dimensions.get('window');
+const window = Dimensions.get('window')
 
 import IndustrialHeader  from './IndustrialHeader'
 import Menu              from './Menu'
@@ -43,6 +44,7 @@ class HomeScreen extends React.Component {
     this.state = { 
       isOpen: false,
       selectedItem: 'About',
+      isSigninInProgress: false,
     }
   }
 
@@ -62,6 +64,24 @@ class HomeScreen extends React.Component {
     this.props.navigation.navigate(item)
   }
 
+  _signIn = async () => {
+    try {
+      await GoogleSignin.hasPlayServices();
+      const userInfo = await GoogleSignin.signIn();
+      this.setState({ userInfo });
+    } catch (error) {
+      if (error.code === statusCodes.SIGN_IN_CANCELLED) {
+        // user cancelled the login flow
+      } else if (error.code === statusCodes.IN_PROGRESS) {
+        // operation (f.e. sign in) is in progress already
+      } else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
+        // play services not available or outdated
+      } else {
+        // some other error happened
+      }
+    }
+  }
+
   render() {
     const menu = <Menu navigator={navigator} onItemSelected={this.onMenuItemSelected} />
 
@@ -75,6 +95,12 @@ class HomeScreen extends React.Component {
           <View style={styles.whiteBg} >
             <Text style={{ paddingBottom: 10 }} >Hello!</Text>
             <Button onPress={()=>{}} title="Login" />
+            <GoogleSigninButton
+              style={{ width: 48, height: 48 }}
+              size={GoogleSigninButton.Size.Icon}
+              color={GoogleSigninButton.Color.Dark}
+              onPress={this._signIn}
+              disabled={this.state.isSigninInProgress} />
           </View>
         </ScrollView>
       </SideMenu>
