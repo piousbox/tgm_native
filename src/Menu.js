@@ -5,10 +5,13 @@ import {
   ScrollView,
   Image,
 } from 'react-native'
+import { connect } from 'react-redux'
 
-const window = Dimensions.get('window');
-const uri = 'https://pickaface.net/gallery/avatar/Opi51c74d0125fd4.png';
+const window = Dimensions.get('window')
 
+import Const from './Const'
+
+const uri = 'https://pickaface.net/gallery/avatar/Opi51c74d0125fd4.png'
 const styles = StyleSheet.create({
   menu: {
     flex: 1,
@@ -46,13 +49,20 @@ const styles = StyleSheet.create({
   },
 });
 
-export default class Menu extends React.Component {
+
+class Menu extends React.Component {
   constructor(props) {
     super(props)
-    // this.state = {}
+  }
+
+  static getDerivedStateFromProps(what){
+    console.warn('+++ which:', what)
+    return {}
   }
 
   render() {
+    console.log('+++ Menu render:', this.state, this.props)
+
     return (
       <ScrollView scrollToTop={false} style={styles.menu} >
 
@@ -69,8 +79,8 @@ export default class Menu extends React.Component {
           style={styles.item} >Home</Text>
 
         <Text
-          onPress={() => this.props.onItemSelected('OurProcess')}
-          style={styles.item} >Our Process</Text>
+          onPress={() => this.props.onItemSelected('Settings')}
+          style={styles.item} >Settings</Text>
 
         <Text
           onPress={() => this.props.onItemSelected('OurTeam')}
@@ -91,4 +101,16 @@ export default class Menu extends React.Component {
       </ScrollView>)
   }
 }
+
+const mapS = (state) => {
+  return {
+    profile: state.profile
+  }
+}
+
+export default connect(mapS)(Menu)
+
+// export default Menu
+
+
 

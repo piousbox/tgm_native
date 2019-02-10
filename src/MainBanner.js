@@ -6,9 +6,17 @@ import {
 } from 'react-native'
 import Image from 'react-native-scalable-image'
 import { Icon, } from 'react-native-elements'
+import { 
+  GoogleSignin, GoogleSigninButton, statusCodes, 
+} from 'react-native-google-signin'
+import { connect } from 'react-redux'
 
-const style = {
-  text: { position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, 
+const window = Dimensions.get('window')
+
+import Const from './Const'
+
+const styles = {
+  /* text: { position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, 
     justifyContent: 'center',
     paddingLeft: 20,
   },
@@ -16,99 +24,103 @@ const style = {
   innerText2: { color: '#fff' },
   p: { 
     padding: 20, 
+  }, */
+  whiteBg: {
+    backgroundColor: '#F5FCFF',
+    height: window.height,
+    padding: 10,
   },
 }
 
-class Card extends React.Component {
-  render () {
-    return null
-  }
-}
+class MainBanner extends React.Component {
+  constructor(props) {
+    super(props)
 
-class Client extends React.Component {
-  render () {
-    return null
-  }
-}
+    this.state = { 
+      isOpen: false,
+      selectedItem: 'About',
+      isSigninInProgress: false,
+    }
 
-class Divider extends React.Component {
+    // client id: 287149765762-ttpcli7i1e2q5jdsnp4g5sobu7v6rjc0.apps.googleusercontent.com
+    // client secret: 0_f76BcWwYF1q1nxGstRJO-S
+    // debug sha-1
+    // F3:35:E2:7E:A6:83:79:E3:83:B7:0D:ED:77:4A:C7:5F:3C:64:00:12
+    // debug client id 287149765762-ttpcli7i1e2q5jdsnp4g5sobu7v6rjc0.apps.googleusercontent.com
+    // production sha-1
+    // 72:FF:D4:95:6C:67:EE:1C:2F:23:12:1F:3C:5B:C3:9C:FB:D0:3F:55
+    GoogleSignin.configure({
+      scopes: ['https://www.googleapis.com/auth/drive.readonly'], // what API you want to access on behalf of the user, default is email and profile
+      webClientId: '287149765762-ttpcli7i1e2q5jdsnp4g5sobu7v6rjc0.apps.googleusercontent.com',
+      offlineAccess: true, // if you want to access Google API on behalf of the user FROM YOUR SERVER
+      hostedDomain: '', // specifies a hosted domain restriction
+      loginHint: '', // [iOS] The user's ID, or email address, to be prefilled in the authentication UI if possible. [See docs here](https://developers.google.com/identity/sign-in/ios/api/interface_g_i_d_sign_in.html#a0a68c7504c31ab0b728432565f6e33fd)
+      forceConsentPrompt: true, // [Android] if you want to show the authorization prompt at each login.
+      accountName: '', // [Android] specifies an account name on the device that should be used
+      // iosClientId: '<FROM DEVELOPER CONSOLE>', // [iOS] optional, if you want to specify the client ID of type iOS (otherwise, it is taken from GoogleService-Info.plist)
+    })
+  }
+
+  _signIn = async () => {
+    try {
+      await GoogleSignin.hasPlayServices();
+      const userInfo = await GoogleSignin.signIn();
+
+      console.warn('+++ userInfo:', userInfo)
+      this.props.dispatch({ type: Const.profileAction, user: userInfo.user })
+
+      this.setState({ userInfo });
+    } catch (error) {
+      console.warn('+++ error:', error)
+      if (error.code === statusCodes.SIGN_IN_CANCELLED) {
+        // user cancelled the login flow
+      } else if (error.code === statusCodes.IN_PROGRESS) {
+        // operation (f.e. sign in) is in progress already
+      } else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
+        // play services not available or outdated
+      } else {
+        // some other error happened
+      }
+    }
+  }
+
   render () {
+    console.warn('+++ MainBanner render:', this.state, this.props)
+    
     return (
-      <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }} >
-        <View style={{ width: '30%', borderBottomColor: 'black', borderBottomWidth: 1, height: '50%' }} />
-        <View style={{ width: 24, }} ><Icon name='filter-vintage' /></View>
-        <View style={{ width: '30%', borderBottomColor: 'black', borderBottomWidth: 1, height: '50%' }} />
-      </View>
-      )
-  }
-}
-
-class Footer extends React.Component {
-  render () {
-    return (
-      <View>
-        { /* <Text>Finally, the footer!</Text> */ }
+      <View style={styles.whiteBg} >
+        <Text style={{ paddingBottom: 10 }} >Hello {this.props.profile.name}!</Text>
+        <GoogleSigninButton
+          style={{ width: 48, height: 48 }}
+          size={GoogleSigninButton.Size.Icon}
+          color={GoogleSigninButton.Color.Dark}
+          onPress={this._signIn}
+          disabled={this.state.isSigninInProgress} />
       </View>
     )
   }
 }
 
-
-class Header extends React.Component {
-  render () {
-    return (
-      <View style={{ flex: 1, flexDirection: 'column' }} >
-        <Text style={{ textAlign: 'center', fontSize: 20 }} >{this.props.children}</Text>
-        <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }} >
-          <View style={{ width: '10%', borderBottomColor: 'green', borderBottomWidth: 6, height: '60%' }} />
-          <View style={{ width: 24, }} ><Icon name='filter-vintage' color="green" /></View>
-          <View style={{ width: '10%', borderBottomColor: 'green', borderBottomWidth: 6, height: '60%' }} />
-        </View>
-      </View>
-    )
+const mapS = (state) => {
+  return {
+    profile: state.profile
   }
 }
 
-class H1 extends React.Component {
-  render () {
-    return null
-  }
-}
-
-class H2 extends React.Component {
-  render () {
-    return null
-  }
-}
-
-class H3 extends React.Component {
-  render () {
-    return null
-  }
-}
-
-class Industry extends React.Component {
-  render () {
-    return null
-  }
-}
+export default connect(mapS)(MainBanner)
 
 
-class Quote extends React.Component {
-  render () {
-    return null
-  }
-}
 
 
-class TeamMember extends React.Component {
-  render () {
-    return null
-  }
-}
 
 
-export default class MainBanner extends React.Component {
+
+
+
+
+
+
+/* export default class MainBanner extends React.Component {
   render() {
     return (
       <View style={{ backgroundColor: 'white' }} >
@@ -138,5 +150,4 @@ export default class MainBanner extends React.Component {
 
       </View>)
   }
-}
-
+} */

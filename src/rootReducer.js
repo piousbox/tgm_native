@@ -1,7 +1,12 @@
-import { combineReducers } from 'redux'
+import { combineReducers, } from 'redux'
 
-const profileReducer = (state={name:'Your Name'}}, action) => {
+import Const from './Const'
+
+const profileReducer = (state={name:'Your Name 2'}, action) => {
   switch (action.type) {
+    case Const.profileAction:
+      console.warn('+++ profileReducer:', action, action.user)
+      return action.user
     default:
       return state
   }
