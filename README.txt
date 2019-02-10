@@ -20,11 +20,12 @@
  
 == Test ==
 
- npm cache clean --force # doesn't do anything
- npm run test
+ # npm cache clean --force # doesn't do anything
+ # npm run test # I'll abandon react native man...
  react-devtools
  react-native log-android
- npm test -- --no-cache
+ # npm test -- --no-cache
+ yarn test
 
 == Build Setup ==
 

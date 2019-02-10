@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "react": "^16.6.3",
-    "react-native": "0.55.4",
+    "react-native": "^0.58.4",
     "react-native-elements": "^0.19.1",
     "react-native-gesture-handler": "^1.0.12",
     "react-native-google-signin": "^1.1.0",
@@ -21,16 +21,21 @@
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
-    "babel-jest": "^24.0.0",
-    "jest": "^23.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/preset-env": "^7.3.1",
+    "jest": "^24.1.0",
+    "jest-react-native": "^18.0.0",
+    "jest-resolve": "^24.1.0",
     "jest-transform-stub": "^1.0.0",
     "metro-react-native-babel-preset": "^0.51.1",
     "react-devtools": "^3.6.0",
-    "react-test-renderer": "^16.6.3",
-    "react-native-google-signin": "^1.1.0"
+    "react-native-google-signin": "^1.1.0",
+    "react-test-renderer": "^16.6.3"
   },
   "jest": {
-    "transform": {},
-    "preset": "react-native"
+    "preset": "react-native",
+    "transformIgnorePatterns": [
+      "node_modules/(?!(react-native)/)"
+    ]
   }
 }
