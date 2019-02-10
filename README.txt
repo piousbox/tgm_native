@@ -13,16 +13,19 @@
 
 == Develop ==
 
+ react-native link
  react-native run-android
  react-native run-ios
  npm run start
  
 == Test ==
 
+ npm cache clean --force # doesn't do anything
  npm run test
  react-devtools
  react-native log-android
- 
+ npm test -- --no-cache
+
 == Build Setup ==
 
 From: https://facebook.github.io/react-native/docs/signed-apk-android
