@@ -14,7 +14,6 @@
 == Develop ==
 
  react-native run-android
-
  react-native run-ios
  npm run start
  

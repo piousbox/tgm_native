@@ -47,17 +47,22 @@ const styles = StyleSheet.create({
 });
 
 export default class Menu extends React.Component {
+  constructor(props) {
+    super(props)
+    // this.state = {}
+  }
+
   render() {
     return (
       <ScrollView scrollToTop={false} style={styles.menu} >
 
-        { /* <View style={styles.avatarContainer}>
+        <View style={styles.avatarContainer}>
           <Image
             style={styles.avatar}
             source={{ uri }}
           />
-          <Text style={styles.name}>Your name</Text>
-        </View> */ }
+          <Text style={styles.name}>{ this.props.profile.name }</Text>
+        </View>
 
         <Text
           onPress={() => this.props.onItemSelected('Home')}

@@ -13,9 +13,12 @@ import { createStackNavigator, createAppContainer, } from 'react-navigation'
 import { 
   GoogleSignin, GoogleSigninButton, statusCodes, 
 } from 'react-native-google-signin'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
 
 const window = Dimensions.get('window')
 
+import rootReducer       from './rootReducer'
 import IndustrialHeader  from './IndustrialHeader'
 import Menu              from './Menu'
 import MainBanner        from './MainBanner'
@@ -59,7 +62,6 @@ class HomeScreen extends React.Component {
     // 72:FF:D4:95:6C:67:EE:1C:2F:23:12:1F:3C:5B:C3:9C:FB:D0:3F:55
     GoogleSignin.configure({
       scopes: ['https://www.googleapis.com/auth/drive.readonly'], // what API you want to access on behalf of the user, default is email and profile
-      // webClientId: '287149765762-ttpcli7i1e2q5jdsnp4g5sobu7v6rjc0.apps.googleusercontent.com', // client ID of type WEB for your server (needed to verify user ID and offline access)
       webClientId: '287149765762-ttpcli7i1e2q5jdsnp4g5sobu7v6rjc0.apps.googleusercontent.com',
       offlineAccess: true, // if you want to access Google API on behalf of the user FROM YOUR SERVER
       hostedDomain: '', // specifies a hosted domain restriction
@@ -96,8 +98,7 @@ class HomeScreen extends React.Component {
 
       this.setState({ userInfo });
     } catch (error) {
-      
-
+      console.warn('+++ error:', error)
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
         // user cancelled the login flow
       } else if (error.code === statusCodes.IN_PROGRESS) {
@@ -106,7 +107,6 @@ class HomeScreen extends React.Component {
         // play services not available or outdated
       } else {
         // some other error happened
-        console.warn('+++ error:', error)
       }
     }
   }
@@ -115,7 +115,7 @@ class HomeScreen extends React.Component {
     const menu = <Menu navigator={navigator} onItemSelected={this.onMenuItemSelected} />
 
     return (
-      <SideMenu 
+      <SideMenu
         menu={menu}
         isOpen={this.state.isOpen}
         onChange={isOpen => this.updateMenuState(isOpen)} >
@@ -123,7 +123,6 @@ class HomeScreen extends React.Component {
           <IndustrialHeader openSidebar={() => {this.setState({isOpen:true})}} />
           <View style={styles.whiteBg} >
             <Text style={{ paddingBottom: 10 }} >Hello!</Text>
-            { /* <Button onPress={()=>{}} title="Login" /> */ }
             <GoogleSigninButton
               style={{ width: 48, height: 48 }}
               size={GoogleSigninButton.Size.Icon}
@@ -137,10 +136,11 @@ class HomeScreen extends React.Component {
   }
 }
 
-
+const store = createStore(rootReducer)
+const HomeScreenWrapped = <Provider store={store}><HomeScreen /></Provider>
 
 const AppNavigator = createStackNavigator({
-  Home: { screen: HomeScreen },
+  Home: { screen: HomeScreenWrapped },
 })
 
 const App = createAppContainer(AppNavigator)
