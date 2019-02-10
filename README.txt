@@ -21,6 +21,8 @@
 == Test ==
 
  npm run test
+ react-devtools
+ react-native log-android
  
 == Build Setup ==
 

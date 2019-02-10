@@ -31,7 +31,6 @@ class Client extends React.Component {
   }
 }
 
-
 class Divider extends React.Component {
   render () {
     return (
